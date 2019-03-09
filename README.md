@@ -1,2 +1,2 @@
 # js-maze-generator
-cara membuat mazegenerator
+cara membuat mazegenerator dengan javascript
