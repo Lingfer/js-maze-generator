@@ -10,7 +10,7 @@ seed = Math.random()*100000|0
 wallColor = '#000000'
 pathColor = '#808080'
 
-// text
+// texts
 
 randomGen = function(seed){
 	if(seed===undefined)var seed=performance.now()
