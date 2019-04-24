@@ -1,14 +1,16 @@
-pathWidth = 10       
-wall = 2             
-outerWall = 2        
-width = 15         
-height = 15 
-delay = 1            
-x = width/2|0        
-y = height/2|0       
+pathWidth = 10
+wall = 2
+outerWall = 2
+width = 15
+height = 14
+delay = 1
+x = width/2|0
+y = height/2|0
 seed = Math.random()*100000|0
-wallColor = '#000000'   
+wallColor = '#000000'
 pathColor = '#808080'
+
+// text
 
 randomGen = function(seed){
 	if(seed===undefined)var seed=performance.now()
@@ -102,17 +104,17 @@ buttonRandomSeed.addEventListener('click',function(){
 loop = function(){
   x = route[route.length-1][0]|0
   y = route[route.length-1][1]|0
-  
+
   var directions = [[1,0],[-1,0],[0,1],[0,-1]],
       alternatives = []
-  
+
   for(var i=0;i<directions.length;i++){
     if(map[(directions[i][1]+y)*2]!=undefined&&
        map[(directions[i][1]+y)*2][(directions[i][0]+x)*2]===false){
       alternatives.push(directions[i])
     }
   }
-  
+
   if(alternatives.length===0){
     route.pop()
     if(route.length>0){
